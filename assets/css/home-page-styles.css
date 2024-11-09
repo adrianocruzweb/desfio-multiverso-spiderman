@@ -56,6 +56,7 @@ body::before {
     object-fit: cover;/* destaque analise */
     position: absolute;
     opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .s-card__image {
@@ -112,4 +113,15 @@ body::before {
     width: 50%;
     height: 2px;
     position: absolute;
+}
+
+/* hover animation */
+
+.s-card--hovered .s-card__background {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.s-card--hovered .s-card__image {
+    transform: scale(1.4);
 }
