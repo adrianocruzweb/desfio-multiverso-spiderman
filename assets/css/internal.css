@@ -1,6 +1,8 @@
 @import url("global.css");
 @import url("reset.css");
 @import url("components/_navigator.css");
+@import url("components/_pills.css");
+@import url("components/_link-button.css");
 
 .s-wrapper {
     display: flex;
@@ -23,11 +25,33 @@
     z-index: 1;
 }
 
-.s-wrapper .s-left-content{
+.s-wrapper .s-main-content{
     width: 100%;
     height: 100%;
     background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 130px;
 }
+
+.s-wrapper .s-main-content__top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.s-wrapper .s-main-content__bottom {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.s-wrapper .s-main-content .s-logo img {
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
