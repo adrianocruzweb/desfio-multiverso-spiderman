@@ -12,10 +12,15 @@
 .s-wrapper .s-left-column{
     width: 100px;
     height: 100%;
-    background-color: black;
+    /* background-color: #000; */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .s-wrapper .s-left-content{
