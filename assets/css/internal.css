@@ -3,6 +3,7 @@
 @import url("components/_navigator.css");
 @import url("components/_pills.css");
 @import url("components/_link-button.css");
+@import url("components/_gallery.css");
 
 .s-wrapper {
     display: flex;
@@ -30,9 +31,12 @@
     height: 100%;
     background-color: gray;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-left: 130px;
+    background-image: url('../images/spiderman-tobey/movie-01/background.png');
+    background-size: cover;
 }
 
 .s-wrapper .s-main-content__top {
