@@ -19,3 +19,8 @@ const addEventListenerToCards = () => {
 }
 
 document.addEventListener('DOMContentLoaded', addEventListenerToCards, false);
+
+
+const selectCarouselItem = (selectedItem) => {
+    console.log(selectedItem);
+}
