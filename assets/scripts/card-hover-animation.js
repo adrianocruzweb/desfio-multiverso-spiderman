@@ -21,6 +21,19 @@ const addEventListenerToCards = () => {
 document.addEventListener('DOMContentLoaded', addEventListenerToCards, false);
 
 
-const selectCarouselItem = (selectedItem) => {
-    console.log(selectedItem);
+const selectCarouselItem = (selectedItemElement) => {
+    const selectedItem = selectedItemElement.id;
+    const carousel = document.querySelector('.s-cards-carousel');
+    const transform = carousel.style.transform;
+    const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i);
+    const rotateYDeg = -120 * (Number(selectedItem) - 1)
+    const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
+
+    carousel.style.transform = newTransform;
+
+    const activeButtonElement = document.querySelector('.s-controller__button--active');
+    console.log(activeButtonElement);
+    activeButtonElement.classList.remove('s-controller__button--active');
+
+    selectedItemElement.classList.add('s-controller__button--active');
 }
